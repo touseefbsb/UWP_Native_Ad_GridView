@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:genTemplate="http://schemas.microsoft.com/appx/developer/windowsTemplateStudio" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap mp genTemplate uap3">
+  <Identity Name="3596Touseefbsb.FluentVideoPlayer" Publisher="CN=SampleNativeBug" Version="0.1.2.0" />
+  <mp:PhoneIdentity PhoneProductId="511be501-26d0-40a4-bafe-dbbd9df4c497" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Fluent Video Player</DisplayName>
+    <PublisherDisplayName>samplebug</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="FluentVideoPlayer.App">
+      <uap:VisualElements DisplayName="Fluent Video Player" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Fluent Video Player" BackgroundColor="black">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Fluent Video Player" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="black" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="portraitFlipped" />
+          <uap:Rotation Preference="landscapeFlipped" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="fluentvideofile">
+            <uap:DisplayName>Fluent Video Player File</uap:DisplayName>
+            <uap:InfoTip>Fluent Video Player File</uap:InfoTip>
+            <uap:EditFlags OpenIsSafe="true" />
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="video/mp4">.mp4</uap:FileType>
+              <uap:FileType ContentType="video/divx">.divx</uap:FileType>
+              <uap:FileType ContentType="video/mkv">.mkv</uap:FileType>
+              <uap:FileType ContentType="video/webm">.webm</uap:FileType>
+              <uap:FileType ContentType="video/flv">.flv</uap:FileType>
+              <uap:FileType ContentType="video/vob">.vob</uap:FileType>
+              <uap:FileType ContentType="video/ogv">.ogv</uap:FileType>
+              <uap:FileType ContentType="video/ogg">.ogg</uap:FileType>
+              <uap:FileType ContentType="video/drc">.drc</uap:FileType>
+              <uap:FileType ContentType="video/gif">.gif</uap:FileType>
+              <uap:FileType ContentType="video/gifv">.gifv</uap:FileType>
+              <uap:FileType ContentType="video/mng">.mng</uap:FileType>
+              <uap:FileType ContentType="video/avi">.avi</uap:FileType>
+              <uap:FileType ContentType="video/mov">.mov</uap:FileType>
+              <uap:FileType ContentType="video/qt">.qt</uap:FileType>
+              <uap:FileType ContentType="video/wmv">.wmv</uap:FileType>
+              <uap:FileType ContentType="video/yuv">.yuv</uap:FileType>
+              <uap:FileType ContentType="video/rm">.rm</uap:FileType>
+              <uap:FileType ContentType="video/rmvb">.rmvb</uap:FileType>
+              <uap:FileType ContentType="video/asf">.asf</uap:FileType>
+              <uap:FileType ContentType="video/amv">.amv</uap:FileType>
+              <uap:FileType ContentType="video/m4p">.m4p</uap:FileType>
+              <uap:FileType ContentType="video/m4v">.m4v</uap:FileType>
+              <uap:FileType ContentType="video/mpg">.mpg</uap:FileType>
+              <uap:FileType ContentType="video/mpeg">.mpeg</uap:FileType>
+              <uap:FileType ContentType="video/mp2">.mp2</uap:FileType>
+              <uap:FileType ContentType="video/mpe">.mpe</uap:FileType>
+              <uap:FileType ContentType="video/mpv">.mpv</uap:FileType>
+              <uap:FileType ContentType="video/m2v">.m2v</uap:FileType>
+              <uap:FileType ContentType="video/svi">.svi</uap:FileType>
+              <uap:FileType ContentType="video/3gp">.3gp</uap:FileType>
+              <uap:FileType ContentType="video/3g2">.3g2</uap:FileType>
+              <uap:FileType ContentType="video/mxf">.mxf</uap:FileType>
+              <uap:FileType ContentType="video/roq">.roq</uap:FileType>
+              <uap:FileType ContentType="video/nsv">.nsv</uap:FileType>
+              <uap:FileType ContentType="video/f4v">.fv4</uap:FileType>
+              <uap:FileType ContentType="video/f4p">.f4p</uap:FileType>
+              <uap:FileType ContentType="video/f4a">.f4a</uap:FileType>
+              <uap:FileType ContentType="video/f4b">.f4b</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <uap:Capability Name="videosLibrary" />
+  </Capabilities>
+  <genTemplate:Metadata>
+    <genTemplate:Item Name="generator" Value="Windows Template Studio" />
+    <genTemplate:Item Name="wizardVersion" Version="v0.17.18089.1" />
+    <genTemplate:Item Name="templatesVersion" Version="v0.17.18089.1" />
+    <genTemplate:Item Name="projectType" Value="SplitView" />
+    <genTemplate:Item Name="framework" Value="MVVMBasic" />
+  </genTemplate:Metadata>
+</Package>
