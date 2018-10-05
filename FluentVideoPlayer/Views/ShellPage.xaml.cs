@@ -29,7 +29,7 @@ namespace FluentVideoPlayer.Views
 
         private void ShellPage_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            ApplicationViewExtensions.SetExtendViewIntoTitleBar(this, true);
+            ApplicationViewExtensions.SetExtendViewIntoTitleBar(this, false);
             TitleBarExtensions.SetButtonBackgroundColor(this, Colors.Transparent);
         }
 
