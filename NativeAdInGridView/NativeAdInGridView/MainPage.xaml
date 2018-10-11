@@ -1,0 +1,44 @@
+﻿<Page x:Class="NativeAdInGridView.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:NativeAdInGridView"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:viewModels="using:NativeAdInGridView.ViewModels"
+      xmlns:selectors="using:NativeAdInGridView.Selectors"
+      xmlns:userControls="using:NativeAdInGridView.UserControls"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <selectors:MyTemplateSelector x:Key="MyTemplateSelector">
+            <selectors:MyTemplateSelector.AdTemplate>
+                <DataTemplate>
+                    <userControls:MyAdContainer Width="400"
+                                                Height="200"
+                                                DataContext="{Binding}" />
+                </DataTemplate>
+            </selectors:MyTemplateSelector.AdTemplate>
+            <selectors:MyTemplateSelector.NormalTemplate>
+                <DataTemplate>
+                    <Grid Width="400"
+                          Height="200"
+                          Background="#555555">
+                        <TextBlock Text="{Binding ItemTitle}"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center" />
+                    </Grid>
+                </DataTemplate>
+            </selectors:MyTemplateSelector.NormalTemplate>
+        </selectors:MyTemplateSelector>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <viewModels:MainViewModel />
+    </Page.DataContext>
+
+    <Grid>
+        <GridView ItemsSource="{Binding MyItems}"
+                  ItemTemplateSelector="{StaticResource MyTemplateSelector}" />
+    </Grid>
+</Page>
