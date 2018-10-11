@@ -1,4 +1,4 @@
 
-WWP native ads in a gridview.
+UWP native ads in a gridview.
 
 
